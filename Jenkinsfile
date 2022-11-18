@@ -20,7 +20,7 @@ pipeline{
         }
 	  stage("Upload to Nexus"){
 		  steps{
-			  nexusArtifactUploader artifacts: [[artifactId: 'DevOpsDemo', classifier: '', file: '/target/DevOpsDemo.war', type: 'war']], credentialsId: '26c5a723-9235-4c81-bc18-4bebb5b5a57f', groupId: 'com.blazeclan', nexusUrl: '15.206.172.101:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'nexus_pipeline', version: '1.0-SNAPSHOT'
+			  nexusArtifactUploader artifacts: [[artifactId: 'DevOpsDemo', classifier: '', file: '/home/ubuntu/workspace/PipelineTask/target/DevOpsDemo.war', type: 'war']], credentialsId: '26c5a723-9235-4c81-bc18-4bebb5b5a57f', groupId: 'com.blazeclan', nexusUrl: '15.206.172.101:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'nexus_pipeline', version: '1.0-SNAPSHOT'
 		  }
 	  }
   }
