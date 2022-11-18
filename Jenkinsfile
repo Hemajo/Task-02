@@ -15,7 +15,7 @@ pipeline{
       }
       stage("deploy"){
        steps{
-          deploy adapters: [tomcat8(credentialsId: 'tomcat', path: '', url: 'http://13.233.65.211:8080/')], contextPath: null, war: '**/*.war'          
+          deploy adapters: [tomcat8(credentialsId: 'tomcat', path: '', url: 'http://13.126.87.105:8090/')], contextPath: null, war: '**/*.war'          
           }
         }
 	  stage("Upload to Nexus"){
