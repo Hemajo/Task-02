@@ -28,7 +28,7 @@ pipeline{
 				  nexusUrl: '15.207.114.135:8081/nexus', 
 				  nexusVersion: 'nexus2', 
 				  protocol: 'http', 
-				  repository: 'maven-central', 
+				  repository: 'assignment_03', 
 				  version: '0.0.1-SNAPSHOT'
 		  }
 	  }
