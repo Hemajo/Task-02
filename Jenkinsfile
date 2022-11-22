@@ -25,7 +25,7 @@ pipeline{
 			  ],
 				  credentialsId: '26c5a723-9235-4c81-bc18-4bebb5b5a57f', 
 				  groupId: 'com.blazeclan', 
-				  nexusUrl: 'http://15.207.114.135/:8081', 
+				  nexusUrl: '15.207.114.135:8081/nexus', 
 				  nexusVersion: 'nexus3', 
 				  protocol: 'http', 
 				  repository: 'maven-central', 
