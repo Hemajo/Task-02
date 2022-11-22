@@ -18,15 +18,15 @@ pipeline{
 			  nexusArtifactUploader artifacts: [
 				  [
 					  artifactId: 'DevOpsDemo', 
-				   	  classifier: '', 
-				          file: 'target/DevOpsDemo.war', 
-				          type: 'war'
+					  classifier: '', 
+					  file: 'target/DevOpsDemo.war', 
+					  type: 'war'
 				  ]
 			  ],
 				  credentialsId: '26c5a723-9235-4c81-bc18-4bebb5b5a57f', 
 				  groupId: 'com.blazeclan', 
 				  nexusUrl: '15.207.114.135:8081/nexus', 
-				  nexusVersion: 'nexus3', 
+				  nexusVersion: 'nexus2', 
 				  protocol: 'http', 
 				  repository: 'maven-central', 
 				  version: '0.0.1-SNAPSHOT'
