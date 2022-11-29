@@ -1,5 +1,9 @@
-pipeline{
-  agent any
+pipeline {
+  agent {
+    node {
+      label 'Jenkins-Slave'
+    }
+  }
   stages{
 	stage(" Maven Build"){
 		steps{
