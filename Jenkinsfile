@@ -23,13 +23,13 @@ pipeline{
 					  type: 'war'
 				  ]
 			  ],
-				  credentialsId: '26c5a723-9235-4c81-bc18-4bebb5b5a57f', 
+				  credentialsId: 'nexus', 
 				  groupId: 'com.blazeclan', 
-				  nexusUrl: '15.207.114.135:8081/nexus', 
-				  nexusVersion: 'nexus2', 
+				  nexusUrl: '3.110.41.148:8081', 
+				  nexusVersion: 'nexus3', 
 				  protocol: 'http', 
-				  repository: 'assignment_03', 
-				  version: '0.0.1-SNAPSHOT'
+				  repository: 'Jenkins_Assignment_3', 
+				  version: '1.${BUILD_NUMBER}'
 		  }
 	  }
   }
