@@ -29,7 +29,7 @@ pipeline {
 			  ],
 				  credentialsId: 'nexus', 
 				  groupId: 'com.blazeclan', 
-				  nexusUrl: '3.110.41.148:8081', 
+				  nexusUrl: '65.1.147.114:8081', 
 				  nexusVersion: 'nexus3', 
 				  protocol: 'http', 
 				  repository: 'Jenkins_Assignment_3', 
