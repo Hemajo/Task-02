@@ -39,7 +39,7 @@ pipeline {
 	  stage('Pull the Artifact from Nexus and Deploy on Production') {
 		  agent any
 		  steps {
-			  sh 'curl -X GET http://65.1.147.114:8081/repository/Jenkins_Assignment_3/com/blazeclan/DevOpsDemo/1.2/DevOpsDemo-1.2.war'
+			  sh 'curl -X GET http://65.1.147.114:8081/repository/Jenkins_Assignment_3/com/blazeclan/DevOpsDemo/${BUILD_NUMBER}/DevOpsDemo-${BUILD_NUMBER}.war -o DevOpsDemo-${BUILD_NUMBER}.war''
 			  deploy adapters: [
 				  tomcat8(credentialsId: 'tomcat', 
 					  path: '', 
