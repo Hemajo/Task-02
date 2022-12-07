@@ -33,7 +33,7 @@ pipeline {
 				  nexusVersion: 'nexus3', 
 				  protocol: 'http', 
 				  repository: 'Jenkins_Assignment_3', 
-				  version: '1.${BUILD_NUMBER}'
+				  version: '${BUILD_NUMBER}'
 		  }
 	  }
 	  stage('Pull the Artifact from Nexus and Deploy on Production') {
