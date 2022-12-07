@@ -49,7 +49,7 @@ pipeline {
 					  path: '', 
 					  url: 'http://13.235.67.41:8080/')
 			  ], 
-				  contextPath: 'DevOpsDemo-App',
+				  contextPath: '',
 				  war: '**/*.war'
 		  }
 	  }
