@@ -32,7 +32,7 @@ pipeline {
 				  nexusUrl: '65.1.110.124:8081', 
 				  nexusVersion: 'nexus3', 
 				  protocol: 'http', 
-				  repository: 'Jenkins_Assignment_3', 
+				  repository: 'test_env', 
 				  version: '${BUILD_NUMBER}'
 		  }
 	  }
@@ -43,7 +43,7 @@ pipeline {
 			  }
 		  }
 		  steps {
-			  sh 'wget --user=admin --password=admin http://65.1.110.124:8081/repository/Jenkins_Assignment_3/com/blazeclan/DevOpsDemo/1.2/DevOpsDemo-1.2.war'
+			  sh 'wget --user=admin --password=admin http://65.1.110.124:8081/repository/test_env/com/blazeclan/DevOpsDemo/1.2/DevOpsDemo-1.2.war'
 			  deploy adapters: [
 				  tomcat8(credentialsId: 'tomcat', 
 					  path: '', 
