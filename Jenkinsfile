@@ -37,7 +37,6 @@ pipeline {
 		  }
 	  }
 	  stage('Pull the Artifact from Nexus and Deploy on Production') {
-		  agent any
 		  steps {
 			  sh 'curl -X GET http://65.1.110.124:8081/repository/Jenkins_Assignment_3/com/blazeclan/DevOpsDemo/1.2/DevOpsDemo-1.2.war/${BUILD_NUMBER}/DevOpsDemo-${BUILD_NUMBER}.war -o DevOpsDemo-${BUILD_NUMBER}.war'
 			  deploy adapters: [
