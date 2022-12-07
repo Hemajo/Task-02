@@ -43,7 +43,7 @@ pipeline {
 			  }
 		  }
 		  steps {
-			  sh 'wget --user=admin --password=admin http://65.1.110.124:8081/repository/test_env/com/blazeclan/DevOpsDemo/1.2/DevOpsDemo-1.2.war'
+			  sh 'wget --user=admin --password=admin http://65.1.110.124:8081/repository/test_env/com/blazeclan/DevOpsDemo/3/DevOpsDemo-3.war'
 			  deploy adapters: [
 				  tomcat8(credentialsId: 'tomcat', 
 					  path: '', 
