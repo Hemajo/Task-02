@@ -43,8 +43,7 @@ pipeline {
 			  }
 		  }
 		  steps {
-			  sh 'wget --user=admin --password=admin http://65.1.110.124:8081/repository/Jenkins_Assignment_3/com/blazeclan/DevOpsDemo/1.2/DevOpsDemo-1.2.war/${BUILD_NUMBER}/DevOpsDemo-${BUILD_NUMBER}.war -o DevOpsDemo-${BUILD_NUMBER}.war'
-			  deploy adapters: [
+			  sh 'wget --user=admin --password=admin http://65.1.110.124:8081/repository/Jenkins_Assignment_3/com/blazeclan/DevOpsDemo/1.2/DevOpsDemo-1.2.war'			  deploy adapters: [
 				  tomcat8(credentialsId: 'tomcat', 
 					  path: '', 
 					  url: 'http://13.235.67.41:8080/')
