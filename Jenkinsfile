@@ -39,7 +39,7 @@ pipeline {
 	  stage('Pull the Artifact from Nexus and Deploy on Production') {
 		  agent{
 			  node{
-				  label 'Jenkins-slave'
+				  label 'Jenkins-Slave'
 			  }
 		  }
 		  steps {
