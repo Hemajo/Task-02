@@ -32,7 +32,7 @@ pipeline {
 				  nexusUrl: '65.1.130.9:8081', 
 				  nexusVersion: 'nexus3', 
 				  protocol: 'http', 
-				  repository: 'test_env', 
+				  repository: 'jenkins-slack', 
 				  version: '${BUILD_NUMBER}'
 		  }
 	  }
