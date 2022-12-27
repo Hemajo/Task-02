@@ -29,10 +29,10 @@ pipeline {
 			  ],
 				  credentialsId: 'nexus', 
 				  groupId: 'com.blazeclan', 
-				  nexusUrl: '65.1.130.9:8081', 
+				  nexusUrl: '65.1.110.124:8081', 
 				  nexusVersion: 'nexus3', 
 				  protocol: 'http', 
-				  repository: 'jenkins-slack', 
+				  repository: 'test_env', 
 				  version: '${BUILD_NUMBER}'
 		  }
 	  }
@@ -43,23 +43,17 @@ pipeline {
 			  }
 		  }
 		  steps {
-			  sh 'wget --user=admin --password=admin http://65.1.130.9:8081/repository/test_env/com/blazeclan/DevOpsDemo/1/DevOpsDemo-1.war'
+			  sh 'wget --user=admin --password=admin http://65.1.110.124:8081/repository/test_env/com/blazeclan/DevOpsDemo/3/DevOpsDemo-3.war''
 			  deploy adapters: [
 				  tomcat8(credentialsId: 'tomcat', 
 					  path: '', 
-					  url: 'http://65.2.5.138:8080/')
+					  url: 'http://13.235.67.41:8080/')
 			  ], 
 				  contextPath: '',
 				  war: '**/*.war'
 		  }
 	  }
   }
- post {
-    always{
-      slackSend channel: '#jenkins', color: 'good', message: 'Build is in progress', teamDomain: 'jenkins', tokenCredentialId: 'slack-test'
-	deleteDir()
-      }
-   }
 }
  
     
